@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  
+  
+  
+  section {
+    padding: 20px;
+  }
+  
+  .episode {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .episode img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+  }
+  
+  .episode h3 {
+    margin-top: 10px;
+  }
+  
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  footer {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .banner-bg {
+    background-image: url('channels4_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+  }
+  .tiktok-highlight {
+    padding: 30px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .tiktok-highlight h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .tiktok-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
