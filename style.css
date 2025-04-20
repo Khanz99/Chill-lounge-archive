@@ -1,82 +1,112 @@
+/* General Styles */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Navigation Bar */
+  .section-nav {
+    text-align: center;
+    background-color: #111;
+    padding: 10px 0;
+    font-family: 'Georgia', serif;
+  }
+  
+  .section-nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
   }
   
-  header {
-    background-color: #222;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 24px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  .section-nav ul li {
+    display: inline-block;
+    margin: 0 15px;
   }
   
+  .section-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
   
+  .section-nav ul li a:hover {
+    color: #ffcc00;
+  }
   
+  /* Tagline */
+  .tagline {
+    text-align: center;
+    margin: 20px auto;
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    color: white;
+  }
   
-  section {
+  /* Section Headings */
+  .section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    font-family: 'Georgia', serif;
+  }
+  
+  /* TikTok Section */
+  .tiktok-section {
     padding: 20px;
+    background-color: #000;
+  }
+  
+  .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .video-card {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .video-card iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+  }
+  
+  /* Podcast Section */
+  .podcast-section {
+    padding: 40px 20px;
+    background-color: #111;
+  }
+  
+  .podcast-episodes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
   }
   
   .episode {
-    background: white;
-    padding: 15px;
-    margin-bottom: 20px;
+    background-color: #1a1a1a;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  .episode img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-  }
-  
-  .episode h3 {
-    margin-top: 10px;
-  }
-  
-  a {
-    color: #007BFF;
-    text-decoration: none;
-  }
-  
-  footer {
-    background-color: #222;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    margin-top: 40px;
-  }
-  .banner-bg {
-    background-image: url('channels4_banner.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    width: 100%;
-  }
-  .tiktok-highlight {
-    padding: 30px 20px;
-    background-color: #fff;
+    padding: 10px;
+    width: 340px;
     text-align: center;
   }
   
-  .tiktok-highlight h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
-    margin-bottom: 20px;
+  .episode iframe {
+    border-radius: 8px;
+    width: 100%;
+    height: 315px;
   }
-  
-  .tiktok-videos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   
