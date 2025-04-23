@@ -186,9 +186,10 @@ body {
 .sports-wrapper h3,
 .sports-wrapper p,
 .sports-wrapper label {
-  color: #1a1a1a;  /* super clear, dark grey text */
+  color: #ffffff;
   font-weight: 600;
 }
+
 
 .sports-heading {
   font-size: 32px;
