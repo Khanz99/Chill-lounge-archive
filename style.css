@@ -142,4 +142,20 @@ body {
     text-align: left;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   }
+  .fixtures-section {
+    background: #f1f1f1;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  #fixture-display {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
   
