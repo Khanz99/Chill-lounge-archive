@@ -159,9 +159,11 @@ body {
   }
   /* Sports Section Redesign */
   .sports-section {
-    background-color: #000000;  /* 🖤 Full black section background */
+    background-color: #000000 !important; /* FORCE full black */
     padding: 50px 20px;
+    color: #ffffff;
   }
+  
   
 
 
