@@ -1,5 +1,10 @@
 /* General Styles */
 body {
+  body {
+    background-color: #000000 !important; /* 🖤 Sets the full page background to black */
+    color: #ffffff;
+  }
+  
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #000;
