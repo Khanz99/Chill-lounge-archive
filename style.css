@@ -158,10 +158,12 @@ body {
     font-size: 20px;
   }
   /* Sports Section Redesign */
-.sports-section {
-  background-color: #eaf6f9;
-  padding: 50px 20px;
-}
+  .sports-section {
+    background-color: #000000;  /* 🖤 Full black section background */
+    padding: 50px 20px;
+  }
+  
+
 
 .sports-wrapper {
   border: 2px solid #333;
