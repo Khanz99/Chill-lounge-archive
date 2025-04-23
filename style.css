@@ -162,14 +162,15 @@ body {
   background-color: #eaf6f9;
   padding: 50px 20px;
 }
+
 .sports-wrapper {
-  border: 3px solid #007acc;
+  border: 2px solid #333;
   border-radius: 15px;
   padding: 30px;
-  background: linear-gradient(to bottom right, #e0f7ff, #c3eafc);  /* 💡 light blue gradient */
+  background-color: #121212; /* 🔥 Rich dark */
   max-width: 1100px;
   margin: auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .sports-wrapper h2,
