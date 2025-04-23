@@ -162,15 +162,22 @@ body {
   background-color: #eaf6f9;
   padding: 50px 20px;
 }
-
 .sports-wrapper {
   border: 3px solid #007acc;
   border-radius: 15px;
   padding: 30px;
-  background-color: #ffffff;
+  background: linear-gradient(to bottom right, #e0f7ff, #c3eafc);  /* 💡 light blue gradient */
   max-width: 1100px;
   margin: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.sports-wrapper h2,
+.sports-wrapper h3,
+.sports-wrapper p,
+.sports-wrapper label {
+  color: #1a1a1a;  /* super clear, dark grey text */
+  font-weight: 600;
 }
 
 .sports-heading {
