@@ -138,15 +138,19 @@ body {
   
   .prem-newsletter {
     margin-top: 30px;
-    background: #ffffff;
-    padding: 20px;
+    background: #1c1c1c;
+    padding: 25px;
     border-radius: 10px;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    color: #e0e0e0;
+    font-size: 15.5px;
+    line-height: 1.7;
+    box-shadow: 0 0 10px rgba(0, 216, 255, 0.1);
   }
+  
+  
   .fixtures-section {
     background: #f1f1f1;
     padding: 25px;
@@ -241,6 +245,28 @@ body {
   line-height: 1.6;
   color: #e0e0e0 !important;
   text-align: center;
+}
+#fixture-display {
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#prediction-form input[type="text"] {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #00d8ff;
+  padding: 8px;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+#prediction-form label {
+  color: #ffffff;
+  font-weight: bold;
 }
 
   
