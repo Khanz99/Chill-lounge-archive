@@ -182,13 +182,28 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.sports-wrapper h2,
-.sports-wrapper h3,
+.sports-wrapper h2 {
+  color: #00d8ff; /* 🔵 Vibrant sky blue */
+  font-weight: 900;
+  font-size: 36px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sports-wrapper h3 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
 .sports-wrapper p,
 .sports-wrapper label {
-  color: #ffffff;
-  font-weight: 600;
+  color: #f0f0f0;  /* Bright grey/white for paragraph text */
+  font-size: 16px;
+  line-height: 1.6;
 }
+
+
 
 
 .sports-heading {
