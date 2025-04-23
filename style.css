@@ -253,16 +253,30 @@ body {
   margin-bottom: 15px;
 }
 
+
 #prediction-form input[type="text"] {
-  background-color: #1a1a1a;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #00d8ff;
   color: #ffffff;
-  border: 1px solid #00d8ff;
-  padding: 8px;
+  padding: 10px 5px;
+  font-size: 16px;
   width: 80%;
-  max-width: 300px;
-  margin-bottom: 10px;
-  border-radius: 6px;
+  max-width: 280px;
+  margin: 10px auto;
+  display: block;
+  outline: none;
+  transition: all 0.3s ease-in-out;
 }
+
+#prediction-form input[type="text"]::placeholder {
+  color: #aaaaaa;
+}
+
+#prediction-form input[type="text"]:focus {
+  border-bottom: 2px solid #ffffff;
+}
+
 
 #prediction-form label {
   color: #ffffff;
