@@ -1,243 +1,706 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Chill Lounge Archive</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chill Lounge Archive</title>
+
+    <!-- Bootstrap Icons for mobile TikTok / YouTube circles -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="section-nav">
-    <ul>
-      <li><a href="#podcasts">Podcasts</a></li>
-      <li><a href="#sports">Sports</a></li>
-      <li><a href="#social">Social</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#team">Team</a></li>
-    </ul>
-  </nav>
 
-  <!-- Tagline -->
-  <section class="tagline">
-    <h2>Conversations About Confidence, Culture, and Real Connection</h2>
+  <!-- Side Decorative Images -->
+  <div class="side-image side-left">
+      <img src="assets/images/CLP14.jpeg" alt="Left Decoration">
+  </div>
+
+  <div class="side-image side-right">
+      <img src="assets/images/CLP12.jpeg" alt="Right Decoration">
+  </div>
+
+  <!-- HERO VIDEO SECTION -->
+  <header class="hero">
+      <video autoplay muted loop playsinline>
+          <source src="assets/tiktok-vids/podcast1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+
+      <!-- Navigation -->
+      <nav class="section-nav">
+          <ul>
+              <li><a href="#podcasts">Podcasts</a></li>
+              <li><a href="#Tiktok">TikTok</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#team">Meet the team</a></li>
+          </ul>
+      </nav>
+
+      <!-- Hero Overlay (Clickable Logo + Tagline) -->
+      <a href="#podcasts" class="hero-overlay-link">
+          <div class="hero-overlay">
+              <img src="assets/images/CLL.jpeg" alt="The Chill Lounge Logo" class="hero-logo" />
+              <p class="hero-tagline" id="typed-tagline"></p>
+          </div>
+      </a>
+  </header>
+
+  <!-- PODCAST BLOCK WRAPPER (Banner + Podcast Layout Together) -->
+  <section class="podcast-block">
+
+      <!-- Banner -->
+      <div class="podcast-banner">
+          <img src="assets/images/CLP11.jpeg" alt="The Chill Lounge Banner">
+
+          <!-- CTA OVERLAY (TikTok left + YouTube right) -->
+          <div class="banner-cta" aria-label="Follow and Subscribe call-to-actions">
+
+              <!-- LEFT CTA (desktop / tablet) -->
+              <div class="banner-cta__card banner-cta__card--left">
+                  <p class="banner-cta__title">Follow us on TikTok</p>
+                  <p class="banner-cta__sub">Daily clips, highlights &amp; behind-the-scenes.</p>
+
+                  <a
+                      class="cta-btn cta-btn--tiktok"
+                      href="https://www.tiktok.com/@the.chill.lounge2"
+                      target="_blank"
+                      rel="noopener"
+                  >
+                      <i data-lucide="music-2"></i>
+                      Follow on TikTok
+                  </a>
+              </div>
+
+              <!-- RIGHT CTA (desktop / tablet) -->
+              <div class="banner-cta__card banner-cta__card--right">
+                  <p class="banner-cta__title">Subscribe on YouTube</p>
+                  <p class="banner-cta__sub">Full episodes + more videos every week.</p>
+
+                  <a
+                      class="cta-btn cta-btn--youtube"
+                      href="https://www.youtube.com/@thechillloungeee?sub_confirmation=1"
+                      target="_blank"
+                      rel="noopener"
+                  >
+                      <i data-lucide="youtube"></i>
+                      Subscribe
+                  </a>
+              </div>
+
+              <!-- MOBILE: ONLY TWO CIRCLE ICON BUTTONS -->
+              <div class="banner-cta__circles">
+                  <!-- TikTok circle on the left -->
+                  <a
+                      href="https://www.tiktok.com/@the.chill.lounge2"
+                      target="_blank"
+                      rel="noopener"
+                      class="circle-btn circle-btn--tiktok"
+                      aria-label="Follow on TikTok"
+                  >
+                      <i class="bi bi-tiktok"></i>
+                  </a>
+
+                  <!-- YouTube circle on the right -->
+                  <a
+                      href="https://www.youtube.com/@thechillloungeee?sub_confirmation=1"
+                      target="_blank"
+                      rel="noopener"
+                      class="circle-btn circle-btn--youtube"
+                      aria-label="Subscribe on YouTube"
+                  >
+                      <i class="bi bi-youtube"></i>
+                  </a>
+              </div>
+
+          </div>
+      </div>
+
+      <!-- PODCAST SECTION -->
+      <section id="podcasts" class="podcast-page">
+
+          <!-- Left card -->
+          <aside class="podcast-card">
+              <img src="assets/images/CLP6.jpeg" alt="Podcast Cover" class="cover-img">
+              <h1>The Chill Lounge</h1>
+              <p>Podcast · 2 episodes · Last updated on 1 Feb 2026</p>
+              <p>Catch our podcasts with our lovely guests.</p>
+              <button class="play-latest" type="button">Play latest</button>
+
+              <div class="quick-actions">
+                  <button type="button" id="btnBookmark" class="icon-btn" aria-label="Bookmark">
+                      <i data-lucide="bookmark"></i>
+                  </button>
+
+                  <button type="button" id="btnShare" class="icon-btn" aria-label="Share">
+                      <i data-lucide="share-2"></i>
+                  </button>
+
+                  <div class="more-wrap">
+                      <button type="button" id="btnMore" class="icon-btn" aria-label="More">
+                          <i data-lucide="more-horizontal"></i>
+                      </button>
+
+                      <!-- Dropdown -->
+                      <div class="more-menu" id="moreMenu" aria-hidden="true">
+                          <button type="button" id="menuCopyLink">Copy link</button>
+                          <button type="button" id="menuOpenYoutube">Open on YouTube</button>
+                          <button type="button" id="menuSave">Save</button>
+                      </div>
+                  </div>
+              </div>
+          </aside>
+
+          <!-- Right episode list -->
+          <div class="episode-list">
+
+              <!-- Filter/sorting -->
+              <div class="episode-filters">
+                  <button type="button">Latest ▼</button>
+                  <button type="button">In progress</button>
+                  <button type="button">Watched</button>
+              </div>
+
+              <!-- Episodes -->
+              <div class="episodes">
+
+                  <!-- Episode 1 -->
+                  <div class="episode" data-video="n91ciXG__MM" role="button" tabindex="0">
+                      <span class="episode-num">1</span>
+                      <img src="assets/images/CLP7.jpeg" alt="Episode 1">
+                      <div class="episode-info">
+                          <h2>Prudence: Life as a Public Figure, Beauty, Influence, and Relationships</h2>
+                          <p>The Chill Lounge · 789 views · 1 year ago</p>
+                      </div>
+                      <button class="episode-options" type="button" aria-label="More options">•••</button>
+                  </div>
+
+                  <!-- Episode 2 -->
+                  <div class="episode" data-video="aFyJmFQ-DEY" role="button" tabindex="0">
+                      <span class="episode-num">2</span>
+                      <img src="assets/images/CLP8.jpeg" alt="Episode 2">
+                      <div class="episode-info">
+                          <h2>The Wisdom of the Sangoma || The Chill Lounge Episode 2</h2>
+                          <p>The Chill Lounge · 3.7k views · 1 year ago</p>
+                      </div>
+                      <button class="episode-options" type="button" aria-label="More options">•••</button>
+                  </div>
+
+              </div>
+
+              <!-- Right-side Carousel Toggle -->
+              <div class="yt-carousel-toggle">
+                  <button type="button" id="openYtCarousel" class="icon-btn icon-btn-dark" aria-label="More videos">
+                      <i data-lucide="chevron-right"></i>
+                  </button>
+              </div>
+
+              <!-- Right-side Sliding YouTube Carousel Panel -->
+              <aside class="yt-carousel" id="ytCarousel" aria-hidden="true">
+                  <div class="yt-carousel__header">
+                      <h3>More from The Chill Lounge</h3>
+                      <button type="button" class="yt-carousel__close" id="closeYtCarousel" aria-label="Close">✕</button>
+                  </div>
+
+                  <div class="yt-carousel__track" id="ytCarouselTrack">
+                      <!-- Slide 1 -->
+                      <div class="yt-slide" data-video="Cj6iJZiH08w&t=128s" role="button" tabindex="0">
+                          <span class="yt-num">2</span>
+                          <img src="assets/images/CLP10.jpeg" alt="Video thumbnail">
+                          <div class="yt-info">
+                              <h4>Campus Chronicles: Flirting Our Way Through South Africa!</h4>
+                              <p>The Chill Lounge · YouTube</p>
+                          </div>
+                          <span class="yt-more">•••</span>
+                      </div>
+
+                      <!-- Slide 2 -->
+                      <div class="yt-slide" data-video="u8-Lz6su6yE" role="button" tabindex="0">
+                          <span class="yt-num">2</span>
+                          <img src="assets/images/CLP11.jpeg" alt="Video thumbnail">
+                          <div class="yt-info">
+                              <h4>Manchester United Transfer Failures, Injuries &amp; Champions League Struggles | Fan Debate (2024)</h4>
+                              <p>The Chill Lounge · YouTube</p>
+                          </div>
+                          <span class="yt-more">•••</span>
+                      </div>
+                  </div>
+
+                  <div class="yt-carousel__nav">
+                      <button type="button" class="yt-nav" id="ytPrev">◀</button>
+                      <button type="button" class="yt-nav" id="ytNext">▶</button>
+                  </div>
+              </aside>
+
+              <!-- Subscribe Box (RIGHT SIDE) -->
+              <div class="subscribe-box">
+                  <h3>Join The Chill Lounge</h3>
+                  <p>Subscribe to our YouTube channel and never miss an episode.</p>
+
+                  <a
+                      href="https://www.youtube.com/@thechillloungeee?sub_confirmation=1"
+                      target="_blank"
+                      rel="noopener"
+                      class="subscribe-btn"
+                  >
+                      Subscribe on YouTube
+                  </a>
+              </div>
+
+          </div>
+
+      </section>
+
   </section>
 
-  <!-- TikTok Section -->
+  <!-- VIDEO MODAL -->
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+      <div class="video-modal__backdrop" id="videoBackdrop"></div>
+
+      <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="Podcast video player">
+          <button class="video-modal__close" id="videoClose" aria-label="Close video">✕</button>
+
+          <div class="video-modal__frame">
+              <iframe
+                  id="videoFrame"
+                  src=""
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+              </iframe>
+          </div>
+      </div>
+  </div>
+
+  <!-- =============================== -->
+  <!-- TIKTOK SECTION – CARD CAROUSEL  -->
+  <!-- =============================== -->
   <section id="social" class="tiktok-section">
-    <h3 class="section-title">TikTok Clips</h3>
-    <div class="video-grid">
-      <div class="video-card">
-        <iframe src="https://www.tiktok.com/embed/7415336431863729414" allowfullscreen></iframe>
-        <p>Episode 1: Wisdom of the Sangoma</p>
+    <div class="tiktok-carousel">
+      <h3 class="section-title">TikTok Clips</h3>
+      <p class="tiktok-carousel__subtitle">
+        SWIPE THROUGH OUR MOST‑WATCHED TIKTOK MOMENTS.
+      </p>
+
+      <div class="tiktok-carousel__viewport">
+        <div class="tiktok-carousel__track" id="tiktokTrack">
+
+          <!-- Card 1 -->
+          <article class="tiktok-card is-active" data-index="0">
+            <div class="tiktok-card__frame">
+              <iframe
+                src="https://www.tiktok.com/embed/7415336431863729414"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="tiktok-card__caption">Clip 1</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="tiktok-card" data-index="1">
+            <div class="tiktok-card__frame">
+              <iframe
+                src="https://www.tiktok.com/embed/7415325884011302149"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="tiktok-card__caption">Clip 2</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="tiktok-card" data-index="2">
+            <div class="tiktok-card__frame">
+              <iframe
+                src="https://www.tiktok.com/embed/7440839341737266488"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="tiktok-card__caption">Clip 3</p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="tiktok-card" data-index="3">
+            <div class="tiktok-card__frame">
+              <iframe
+                src="https://www.tiktok.com/embed/7440765826183007544"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="tiktok-card__caption">Clip 4</p>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="tiktok-card" data-index="4">
+            <div class="tiktok-card__frame">
+              <iframe
+                src="https://www.tiktok.com/embed/7440579099698990392"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="tiktok-card__caption">Clip 5</p>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="tiktok-card" data-index="5">
+            <div class="tiktok-card__frame">
+              <iframe
+                src="https://www.tiktok.com/embed/7414570023626312966"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="tiktok-card__caption">Clip 6</p>
+          </article>
+
+        </div>
+
+        <!-- Nav arrows -->
+        <button class="tiktok-carousel__nav tiktok-carousel__nav--prev" id="tiktokPrev" aria-label="Previous clip">
+          ◀
+        </button>
+        <button class="tiktok-carousel__nav tiktok-carousel__nav--next" id="tiktokNext" aria-label="Next clip">
+          ▶
+        </button>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.tiktok.com/embed/7415325884011302149" allowfullscreen></iframe>
-        <p>Episode 2: Prudence on Beauty & Influence</p>
+
+      <!-- Dots -->
+      <div class="tiktok-carousel__dots" id="tiktokDots">
+        <button class="is-active" data-index="0" aria-label="Go to clip 1"></button>
+        <button data-index="1" aria-label="Go to clip 2"></button>
+        <button data-index="2" aria-label="Go to clip 3"></button>
+        <button data-index="3" aria-label="Go to clip 4"></button>
+        <button data-index="4" aria-label="Go to clip 5"></button>
+        <button data-index="5" aria-label="Go to clip 6"></button>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.tiktok.com/embed/7429200102603951366" allowfullscreen></iframe>
-        <p>Episode 3: Chill & Real Talk</p>
+
+      <div class="tiktok-carousel__cta">
+        <a href="https://www.tiktok.com/@the.chill.lounge2"
+           target="_blank" rel="noopener"
+           class="cta-btn cta-btn--tiktok">
+          <i data-lucide="music-2"></i>
+          Follow on TikTok
+        </a>
       </div>
     </div>
-    <section id="alpha-openers" style="padding: 4rem 2rem; background-color: #111; color: #fff;">
-      <div style="max-width: 900px; margin: 0 auto;">
-        <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">📘 Alpha Male Openers – Free PDF Course</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #ccc;">
-          A confidence-building resource created by The Chill Lounge — proven openers and social frameworks used in real-life interactions on campus, in malls, and beyond.
+  </section>
+
+  <!-- ABOUT + TEAM BLACK BAND -->
+  <div class="about-band">
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+      <div class="about-inner">
+        <h2>About The Chill Lounge</h2>
+        <p>
+          The Chill Lounge was born out of the jump from a small city to big‑city Joburg at 19 –
+          no friends, no family nearby, and barely enough money to get by. That experience of trying
+          to figure out varsity life alone is the heartbeat of the show. The channel exists to uplift
+          young men in university who feel like we did: far from home, under pressure, but still hungry
+          to grow. We don’t claim to have all the answers, but we’ve picked up tools, lessons and
+          confidence along the way – and we share them so the next guy doesn’t have to walk it alone.
         </p>
-    
-        <!-- Embedded PDF -->
-        <div style="border: 1px solid #444; border-radius: 12px; overflow: hidden; box-shadow: 0 0 12px rgba(0,0,0,0.5);">
-          <iframe 
-            src="assets/Alpha-Male-Openers.pdf" 
-            width="100%" 
-            height="600px" 
-            style="border: none;">
-          </iframe>
+
+        <h3>What we talk about</h3>
+        <ul class="about-list">
+          <li>
+            <strong>Relationships &amp; dating</strong> – late‑night chats about love,
+            situationships and everything in between.
+          </li>
+          <li>
+            <strong>Campus life &amp; young men</strong> – money struggles, new cities and the
+            pressure to become “someone” fast.
+          </li>
+          <li>
+            <strong>Football, sport &amp; escape</strong> – the pure expression and emotional
+            escape that sport gives us.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="team" class="about-team">
+      <div class="about-inner">
+        <div class="about-team-header">
+          <h3>Meet the team</h3>
+          <p>The faces and minds behind The Chill Lounge.</p>
         </div>
-    
-        <!-- Download Button -->
-        <div style="margin-top: 1.5rem; text-align: center;">
-          <a href="assets/Alpha-Male-Openers.pdf" download target="_blank">
-            <button style="background-color: #00b894; color: white; border: none; padding: 12px 28px; font-size: 16px; border-radius: 8px; cursor: pointer;">
-              📥 Download the Full Guide (PDF)
-            </button>
-          </a>
+
+        <div class="about-team-grid">
+          <article class="team-card">
+            <img src="assets/images/CLK2.jpeg" alt="Khanyi" class="team-img">
+            <h3>Khanyi</h3>
+            <p class="team-role">Host · Producer · Director</p>
+            <p class="team-bio">
+              Khanyi is the driving mind behind The Chill Lounge, steering the conversations as host,
+              producer and director with calm, confident energy.
+            </p>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/CLB2.jpeg" alt="Chomp" class="team-img">
+            <h3>Chomp</h3>
+            <p class="team-role">Host · Editor · Director</p>
+            <p class="team-bio">
+              Chomp brings chaos and charm, risking his whole reputation for South Africa’s finest
+              while dropping unfiltered honesty and one‑liners.
+            </p>
+          </article>
+
+          <article class="team-card">
+            <img src="assets/images/CLB.jpeg" alt="Boksie" class="team-img">
+            <h3>Boksie</h3>
+            <p class="team-role">Host · Producer</p>
+            <p class="team-bio">
+              Boksie is the cowboy from the mountains of Stiba, laid‑back on the mic but always ready
+              to quietly steal the show.
+            </p>
+          </article>
         </div>
       </div>
     </section>
-    
-  
-  
-  
-  <!-- Podcast Section -->
-  <section id="podcasts" class="podcast-section">
-    <h3 class="section-title">Podcast Episodes</h3>
-    <div class="podcast-episodes">
-      <div class="episode">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/aFyJmFQ-DEY" title="Episode 1"></iframe>
-        <p>Episode 1: The Wisdom of the Sangoma</p>
-      </div>
-      <div class="episode">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/n91ciXG__MM" title="Episode 2"></iframe>
-        <p>Episode 2: Life as a Public Figure ft. Prudence</p>
-      </div>
-    </div>
-  </section>
-  <section id="sports" class="sports-section">
-    <div class="sports-wrapper">
-      <h2 class="sports-heading">⚽ THE SPORTS SECTION</h2>
-    <p class="section-intro">
-      Dive into our latest sports talk — fresh takes, heated debates, and matchday reactions from The Chill Lounge team.
-    </p>
-  
-    <!-- TikTok Videos -->
-    <div class="sports-videos">
-      <iframe src="https://www.tiktok.com/embed/7440839341737266488" width="325" height="575" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.tiktok.com/embed/7440765826183007544" width="325" height="575" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.tiktok.com/embed/7440579099698990392" width="325" height="575" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.tiktok.com/embed/7414570023626312966" width="325" height="575" frameborder="0" allowfullscreen></iframe>
-    </div>
-  
-    <!-- YouTube Video -->
-    <div class="youtube-feature">
-      <h3>Match Reaction: Super Sunday Breakdown</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/u8-Lz6su6yE" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="fixtures-section">
-      <h3>Upcoming Fixtures & Your Predictions</h3>
-      <div id="fixture-display" style="margin-top: 10px; font-weight: bold; font-size: 18px;"></div>
-      <div id="fixture-badges" style="display: flex; justify-content: center; align-items: center; gap: 25px; margin-top: 20px;">
-        <div style="text-align: center;">
-          <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal" width="50" />
-          <p style="color: #ffffff; margin-top: 5px;">Arsenal</p>
-        </div>
-        <div style="font-size: 24px; font-weight: bold; color: #ffffff;">VS</div>
-        <div style="text-align: center;">
-          <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Crystal_Palace_FC_logo.svg" alt="Crystal Palace" width="50" />
-          <p style="color: #ffffff; margin-top: 5px;">Crystal Palace</p>
-        </div>
-      </div>
-      
-      <div id="fixture-badges" style="display: flex; justify-content: center; align-items: center; gap: 25px; margin-top: 20px;">
-        <div style="text-align: center;">
-          <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal" width="50" />
-          <p style="color: #ffffff; margin-top: 5px;">Arsenal</p>
-        </div>
-        <div style="font-size: 24px; font-weight: bold; color: #ffffff;">VS</div>
-        <div style="text-align: center;">
-          <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Crystal_Palace_FC_logo.svg" alt="Crystal Palace" width="50" />
-          <p style="color: #ffffff; margin-top: 5px;">Crystal Palace</p>
-        </div>
-      </div>
-      
-      <form id="prediction-form" style="margin-top: 20px;">
-        <label for="winner">Who will win?</label><br />
-        <input type="text" id="winner" name="winner" placeholder="Team name" required /><br /><br />
-    
-        <label for="score">Predicted Score</label><br />
-        <input type="text" id="score" name="score" placeholder="e.g. 2-1" required /><br /><br />
-    
-        <button type="submit">Submit Prediction</button>
-      </form>
-    
-      <div id="prediction-confirmation" style="margin-top: 15px; font-weight: bold;"></div>
-    </div>
-    
-    <article class="prem-newsletter">
-      <h3>Premier League Weekend Roundup</h3>
-      <p>
-        This past Premier League weekend delivered everything — goals, drama, and a major shake-up at the top and bottom of the table.
-      </p>
-      <p>
-        Starting with Chelsea, the Blues showed flashes of their old dominance with a confident 5-0 demolition of West Ham at Stamford Bridge. Cole Palmer was once again the heartbeat of the attack, adding another goal to his already stellar campaign, while Noni Madueke and Nicolas Jackson stepped up with sharp runs and clinical finishes. For a team that's been heavily criticized this season, this win felt like a statement — not just of attacking quality, but of intent going into the final stretch.
-      </p>
-      <p>
-        Meanwhile, Arsenal continue to apply pressure at the top after dismantling Wolves 3-0 with a display of organized chaos and precise pressing. Mikel Arteta’s side look composed, confident, and very much in control of their title charge. Liverpool, on the other hand, dropped critical points at Craven Cottage in a frustrating 2-2 draw with Fulham. Questions will be asked about their midfield control and the inconsistency that’s crept into their form at the worst possible time.
-      </p>
-      <p>
-        Manchester City handled their business like the machine they are — a comfortable 4-1 win over Leeds, with Erling Haaland back among the goals and Kevin De Bruyne running the show. Pep Guardiola’s men are once again showing why they're the most feared team in the league when momentum hits.
-      </p>
-      <p>
-        Further down the table, the relegation battle is heating up. Nottingham Forest’s shock win over Brighton could prove season-defining, while Burnley continue to struggle to put points on the board. The intensity is rising week by week — and next weekend’s fixtures are looking even more unpredictable.
-      </p>
-      <p>
-        That’s all from this week's roundup. Tune in to The Chill Lounge for raw reactions, debates, and vibes as we break down all the action, banter about your team’s chances, and get real about who’s got that dog in them 🔥🐕
-      </p>
-    </article>
-    <script>
-      const fixtures = [
-        // Premier League
-        "Arsenal vs Crystal Palace",
-        "Manchester United vs Nottingham Forest",
-        "Chelsea vs Fulham",
-        "Liverpool vs Tottenham Hotspur",
-    
-        // PSL
-        "AmaZulu FC vs Richards Bay FC",
-        "TS Galaxy vs Sekhukhune United",
-        "Orlando Pirates vs Sekhukhune United",
-        "Stellenbosch FC vs Chippa United",
-    
-        // La Liga
-        "Leganés vs Girona",
-        "Osasuna vs Sevilla",
-        "Atlético Madrid vs Rayo Vallecano",
-        "Real Madrid vs Getafe",
-    
-        // Bundesliga
-        "VfB Stuttgart vs Heidenheim",
-        "Bayern Munich vs Mainz 05",
-        "Borussia Dortmund vs Werder Bremen",
-        "Eintracht Frankfurt vs RB Leipzig"
-      ];
-    
+  </div>
+
+  <!-- Typewriter Script -->
+  <script>
+      const taglineText = "Confidence. Culture. Real Connection.";
+      const taglineElement = document.getElementById("typed-tagline");
       let index = 0;
-    
-      function showNextFixture() {
-        const fixtureDisplay = document.getElementById("fixture-display");
-        fixtureDisplay.textContent = `Match: ${fixtures[index]}`;
-        index = (index + 1) % fixtures.length;
+
+      function typeWriter() {
+          if (index < taglineText.length) {
+              taglineElement.innerHTML += taglineText.charAt(index);
+              index++;
+              setTimeout(typeWriter, 100);
+          }
       }
-    
-      // Run on load + set interval
-      showNextFixture();
-      setInterval(showNextFixture, 30000);
-    
-      // Prediction form logic
-      const form = document.getElementById("prediction-form");
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-    
-        const fixture = document.getElementById("fixture-display").textContent;
-        const winner = document.getElementById("winner").value;
-        const score = document.getElementById("score").value;
-    
-        const prediction = {
-          fixture,
-          winner,
-          score,
-          time: new Date().toLocaleString()
-        };
-    
-        let saved = JSON.parse(localStorage.getItem("predictions") || "[]");
-        saved.push(prediction);
-        localStorage.setItem("predictions", JSON.stringify(saved));
-    
-        document.getElementById("prediction-confirmation").textContent = "✅ Your prediction has been saved!";
-        form.reset();
+
+      const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  typeWriter();
+                  obs.unobserve(entry.target);
+              }
+          });
+      }, { threshold: 0.5 });
+
+      observer.observe(taglineElement);
+  </script>
+
+  <!-- Video Modal Script -->
+  <script>
+      const modal = document.getElementById("videoModal");
+      const backdrop = document.getElementById("videoBackdrop");
+      const closeBtn = document.getElementById("videoClose");
+      const frame = document.getElementById("videoFrame");
+
+      function parseStartTimeToSeconds(tVal) {
+          if (!tVal) return 0;
+          const raw = String(tVal).replace(/^t/, "").trim();
+
+          if (/^\d+$/.test(raw)) return parseInt(raw, 10);
+          if (/^\d+s$/.test(raw)) return parseInt(raw, 10);
+
+          let seconds = 0;
+          const h = raw.match(/(\d+)h/);
+          const m = raw.match(/(\d+)m/);
+          const s = raw.match(/(\d+)s/);
+
+          if (h) seconds += parseInt(h[1], 10) * 3600;
+          if (m) seconds += parseInt(m[1], 10) * 60;
+          if (s) seconds += parseInt(s[1], 10);
+
+          return seconds;
+      }
+
+      function normalizeYouTubeData(raw) {
+          const str = String(raw || "").trim();
+          let id = str;
+          let start = 0;
+
+          const parts = str.split("&");
+          id = parts[0].split("?")[0];
+
+          for (const p of parts) {
+              if (p.startsWith("t=")) start = parseStartTimeToSeconds(p.slice(2));
+              if (p.startsWith("start=")) start = parseStartTimeToSeconds(p.slice(6));
+              if (/^t\d/.test(p)) start = parseStartTimeToSeconds(p);
+          }
+
+          if (str.includes("?")) {
+              const qs = str.split("?")[1];
+              const sp = new URLSearchParams(qs);
+              if (sp.get("t")) start = parseStartTimeToSeconds(sp.get("t"));
+              if (sp.get("start")) start = parseStartTimeToSeconds(sp.get("start"));
+          }
+
+          return { id, start };
+      }
+
+      function openVideo(videoData) {
+          const { id, start } = normalizeYouTubeData(videoData);
+          const startParam = start ? `&start=${start}` : "";
+          frame.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0${startParam}`;
+
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+      }
+
+      function closeVideo() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          frame.src = "";
+          document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll("#podcasts .episode[data-video]").forEach(ep => {
+          ep.addEventListener("click", (e) => {
+              if (e.target.closest(".episode-options")) return;
+              openVideo(ep.getAttribute("data-video"));
+          });
+
+          ep.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  openVideo(ep.getAttribute("data-video"));
+              }
+          });
       });
-    </script>
-    
-    
-  </section>
-  
-  
+
+      backdrop.addEventListener("click", closeVideo);
+      closeBtn.addEventListener("click", closeVideo);
+
+      document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && modal.classList.contains("is-open")) closeVideo();
+      });
+
+      const playLatestBtn = document.querySelector("#podcasts .play-latest");
+      if (playLatestBtn) {
+          playLatestBtn.addEventListener("click", () => {
+              const firstEpisode = document.querySelector("#podcasts .episode[data-video]");
+              if (firstEpisode) openVideo(firstEpisode.getAttribute("data-video"));
+          });
+      }
+  </script>
+
+  <!-- YouTube Carousel Script -->
+  <script>
+    const ytCarousel = document.getElementById("ytCarousel");
+    const openYtCarousel = document.getElementById("openYtCarousel");
+    const closeYtCarousel = document.getElementById("closeYtCarousel");
+
+    if (openYtCarousel && ytCarousel) {
+      openYtCarousel.addEventListener("click", () => {
+        ytCarousel.classList.add("is-open");
+        ytCarousel.setAttribute("aria-hidden", "false");
+      });
+    }
+
+    if (closeYtCarousel && ytCarousel) {
+      closeYtCarousel.addEventListener("click", () => {
+        ytCarousel.classList.remove("is-open");
+        ytCarousel.setAttribute("aria-hidden", "true");
+      });
+    }
+
+    const track = document.getElementById("ytCarouselTrack");
+    const ytPrev = document.getElementById("ytPrev");
+    const ytNext = document.getElementById("ytNext");
+
+    function scrollTrack(dir) {
+      if (!track) return;
+      const slideWidth = track.querySelector(".yt-slide")?.offsetWidth || 460;
+      track.scrollBy({ left: dir * (slideWidth + 14), behavior: "smooth" });
+    }
+
+    if (ytPrev) ytPrev.addEventListener("click", () => scrollTrack(-1));
+    if (ytNext) ytNext.addEventListener("click", () => scrollTrack(1));
+
+    document.querySelectorAll(".yt-slide[data-video]").forEach(slide => {
+      slide.addEventListener("click", () => {
+        const vid = slide.getAttribute("data-video");
+        if (typeof openVideo === "function" && vid) openVideo(vid);
+      });
+
+      slide.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          const vid = slide.getAttribute("data-video");
+          if (typeof openVideo === "function" && vid) openVideo(vid);
+        }
+      });
+    });
+  </script>
+
+  <!-- TikTok Card Carousel Script -->
+  <script>
+    (function initTiktokCarousel(){
+      const cards = Array.from(document.querySelectorAll(".tiktok-card"));
+      if (!cards.length) return;
+
+      const dotsWrap = document.getElementById("tiktokDots");
+      const dots = dotsWrap ? Array.from(dotsWrap.querySelectorAll("button")) : [];
+      const prevBtn = document.getElementById("tiktokPrev");
+      const nextBtn = document.getElementById("tiktokNext");
+
+      let current = 0;
+
+      function updateClasses(){
+        cards.forEach(c => c.classList.remove("is-active","is-prev","is-next"));
+        dots.forEach(d => d.classList.remove("is-active"));
+
+        const prev = (current - 1 + cards.length) % cards.length;
+        const next = (current + 1) % cards.length;
+
+        cards[current].classList.add("is-active");
+        cards[prev].classList.add("is-prev");
+        cards[next].classList.add("is-next");
+
+        if (dots[current]) dots[current].classList.add("is-active");
+      }
+
+      function goTo(index){
+        current = (index + cards.length) % cards.length;
+        updateClasses();
+      }
+
+      if (prevBtn){
+        prevBtn.addEventListener("click", () => goTo(current - 1));
+      }
+      if (nextBtn){
+        nextBtn.addEventListener("click", () => goTo(current + 1));
+      }
+
+      dots.forEach(d => {
+        d.addEventListener("click", () => {
+          const idx = parseInt(d.getAttribute("data-index"), 10) || 0;
+          goTo(idx);
+        });
+      });
+
+      // Allow click on side cards
+      cards.forEach((card, idx) => {
+        card.addEventListener("click", () => {
+          if (idx !== current) goTo(idx);
+        });
+      });
+
+      updateClasses();
+    })();
+  </script>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
 </body>
 </html>
