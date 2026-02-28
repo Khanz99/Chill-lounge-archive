@@ -1526,3 +1526,15 @@ html, body {
     line-height: 1.6;
   }
 }
+
+/* Full-width grey band between hero and TikTok/podcast */
+.hero-spacer{
+  width: 100%;
+  height: 60px;                 /* adjust to taste: 40–80px */
+  background: #1e1e1e;          /* medium‑dark grey */
+}
+/* Prevent horizontal page scroll so swipe feels anchored */
+html, body {
+  overflow-x: hidden;
+}
+

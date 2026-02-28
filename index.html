@@ -53,6 +53,9 @@
     </a>
   </header>
 
+  <!-- Grey spacer between hero and content -->
+  <section class="hero-spacer"></section>
+
   <!-- PODCAST BLOCK WRAPPER (Banner + Podcast Layout Together) -->
   <section class="podcast-block">
 
@@ -499,7 +502,7 @@
       observer.observe(taglineElement);
   </script>
 
-  <!-- Hero video autoplay helper (UPDATE) -->
+  <!-- Hero video autoplay helper -->
   <script>
     window.addEventListener("load", () => {
       const hv = document.querySelector(".hero-video");
@@ -507,7 +510,7 @@
         const playPromise = hv.play();
         if (playPromise && playPromise.catch) {
           playPromise.catch(() => {
-            // if browser blocks autoplay, just ignore – user will see first frame
+            // if browser blocks autoplay, just ignore
           });
         }
       }
@@ -660,7 +663,7 @@
     });
   </script>
 
-  <!-- TikTok Card Carousel Script (UPDATED for swipe) -->
+  <!-- TikTok Card Carousel Script (UPDATED swipe) -->
   <script>
     (function initTiktokCarousel(){
       const cards = Array.from(document.querySelectorAll(".tiktok-card"));
@@ -713,32 +716,60 @@
         });
       });
 
-      // --- Swipe support (UPDATE) ---
+      // --- UPDATED swipe support ---
       let touchStartX = null;
+      let touchStartY = null;
 
       function handleTouchStart(e) {
         const t = e.touches[0];
         touchStartX = t.clientX;
+        touchStartY = t.clientY;
+      }
+
+      function handleTouchMove(e) {
+        if (touchStartX === null || touchStartY === null) return;
+        const t = e.touches[0];
+        const diffX = t.clientX - touchStartX;
+        const diffY = t.clientY - touchStartY;
+
+        const horizontalThreshold = 10;
+        const verticalLimit = 35;
+
+        // mostly horizontal: prevent page from moving sideways
+        if (Math.abs(diffX) > horizontalThreshold && Math.abs(diffY) < verticalLimit) {
+          e.preventDefault();
+        }
       }
 
       function handleTouchEnd(e) {
-        if (touchStartX === null) return;
+        if (touchStartX === null || touchStartY === null) return;
         const t = e.changedTouches[0];
         const diffX = t.clientX - touchStartX;
-        const threshold = 40; // minimum px swipe distance
+        const diffY = t.clientY - touchStartY;
 
-        if (diffX > threshold) {
+        const swipeThreshold = 40;
+        const verticalLimit = 35;
+
+        // ignore vertical scroll gestures
+        if (Math.abs(diffY) > verticalLimit) {
+          touchStartX = touchStartY = null;
+          return;
+        }
+
+        if (diffX > swipeThreshold) {
           goTo(current - 1); // swipe right => previous
-        } else if (diffX < -threshold) {
+        } else if (diffX < -swipeThreshold) {
           goTo(current + 1); // swipe left => next
         }
-        touchStartX = null;
+
+        touchStartX = touchStartY = null;
       }
 
       const viewport = document.querySelector(".tiktok-carousel__viewport");
       if (viewport) {
-        viewport.addEventListener("touchstart", handleTouchStart, { passive: true });
-        viewport.addEventListener("touchend", handleTouchEnd, { passive: true });
+        viewport.addEventListener("touchstart", handleTouchStart, { passive: false });
+        viewport.addEventListener("touchmove", handleTouchMove, { passive: false });
+        viewport.addEventListener("touchend", handleTouchEnd, { passive: false });
       }
       // --- end swipe support ---
 
@@ -752,3 +783,4 @@
 
 </body>
 </html>
+
