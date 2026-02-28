@@ -25,28 +25,32 @@
 
   <!-- HERO VIDEO SECTION -->
   <header class="hero">
-      <video autoplay muted loop playsinline>
-          <source src="assets/tiktok-vids/podcast1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-      </video>
+    <video
+      class="hero-video"
+      src="assets/tiktok-vids/podcast1.mp4"
+      playsinline
+      muted
+      autoplay
+      loop
+    ></video>
 
-      <!-- Navigation -->
-      <nav class="section-nav">
-          <ul>
-              <li><a href="#podcasts">Podcasts</a></li>
-              <li><a href="#Tiktok">TikTok</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#team">Meet the team</a></li>
-          </ul>
-      </nav>
+    <!-- Navigation -->
+    <nav class="section-nav">
+        <ul>
+            <li><a href="#podcasts">Podcasts</a></li>
+            <li><a href="#social">TikTok</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Meet the team</a></li>
+        </ul>
+    </nav>
 
-      <!-- Hero Overlay (Clickable Logo + Tagline) -->
-      <a href="#podcasts" class="hero-overlay-link">
-          <div class="hero-overlay">
-              <img src="assets/images/CLL.jpeg" alt="The Chill Lounge Logo" class="hero-logo" />
-              <p class="hero-tagline" id="typed-tagline"></p>
-          </div>
-      </a>
+    <!-- Hero Overlay (Clickable Logo + Tagline) -->
+    <a href="#podcasts" class="hero-overlay-link">
+        <div class="hero-overlay">
+            <img src="assets/images/CLL.jpeg" alt="The Chill Lounge Logo" class="hero-logo" />
+            <p class="hero-tagline" id="typed-tagline"></p>
+        </div>
+    </a>
   </header>
 
   <!-- PODCAST BLOCK WRAPPER (Banner + Podcast Layout Together) -->
@@ -495,6 +499,21 @@
       observer.observe(taglineElement);
   </script>
 
+  <!-- Hero video autoplay helper (UPDATE) -->
+  <script>
+    window.addEventListener("load", () => {
+      const hv = document.querySelector(".hero-video");
+      if (hv) {
+        const playPromise = hv.play();
+        if (playPromise && playPromise.catch) {
+          playPromise.catch(() => {
+            // if browser blocks autoplay, just ignore – user will see first frame
+          });
+        }
+      }
+    });
+  </script>
+
   <!-- Video Modal Script -->
   <script>
       const modal = document.getElementById("videoModal");
@@ -641,7 +660,7 @@
     });
   </script>
 
-  <!-- TikTok Card Carousel Script -->
+  <!-- TikTok Card Carousel Script (UPDATED for swipe) -->
   <script>
     (function initTiktokCarousel(){
       const cards = Array.from(document.querySelectorAll(".tiktok-card"));
@@ -693,6 +712,35 @@
           if (idx !== current) goTo(idx);
         });
       });
+
+      // --- Swipe support (UPDATE) ---
+      let touchStartX = null;
+
+      function handleTouchStart(e) {
+        const t = e.touches[0];
+        touchStartX = t.clientX;
+      }
+
+      function handleTouchEnd(e) {
+        if (touchStartX === null) return;
+        const t = e.changedTouches[0];
+        const diffX = t.clientX - touchStartX;
+        const threshold = 40; // minimum px swipe distance
+
+        if (diffX > threshold) {
+          goTo(current - 1); // swipe right => previous
+        } else if (diffX < -threshold) {
+          goTo(current + 1); // swipe left => next
+        }
+        touchStartX = null;
+      }
+
+      const viewport = document.querySelector(".tiktok-carousel__viewport");
+      if (viewport) {
+        viewport.addEventListener("touchstart", handleTouchStart, { passive: true });
+        viewport.addEventListener("touchend", handleTouchEnd, { passive: true });
+      }
+      // --- end swipe support ---
 
       updateClasses();
     })();
