@@ -8,7 +8,9 @@ html, body {
     font-family: Arial, sans-serif;
     background-color: #000;
     color: #fff;
+    overflow-x: hidden;          /* prevent horizontal page scroll */
 }
+
 
 /* ========================= */
 /* Navigation Bar */
@@ -30,6 +32,7 @@ html, body {
     background: rgba(0, 0, 0, 0.85);
 }
 
+
 .section-nav ul {
     list-style: none;
     display: flex;
@@ -37,6 +40,7 @@ html, body {
     padding: 0;
     margin: 0;
 }
+
 
 .section-nav ul li a {
     color: white;
@@ -46,9 +50,11 @@ html, body {
     transition: color 0.3s;
 }
 
+
 .section-nav ul li a:hover {
     color: #ffcc00;
 }
+
 
 /* ========================= */
 /* Hero Section */
@@ -62,6 +68,7 @@ html, body {
     padding: 0;
 }
 
+
 .hero video {
     position: absolute;
     top: 0;
@@ -73,6 +80,7 @@ html, body {
     display: block;
 }
 
+
 /* Hero Overlay (Logo + Tagline) */
 .hero-overlay-link {
     display: block;
@@ -81,6 +89,7 @@ html, body {
     text-align: center;
     z-index: 2;
 }
+
 
 .hero-overlay {
     position: absolute;
@@ -95,10 +104,12 @@ html, body {
     cursor: pointer;
 }
 
+
 .hero-overlay:hover {
     transform: translate(-50%, -50%) scale(1.05);
     box-shadow: 0 10px 20px rgba(255, 255, 0, 0.4);
 }
+
 
 .hero-logo {
     max-width: 200px;
@@ -106,12 +117,14 @@ html, body {
     margin-bottom: 15px;
 }
 
+
 .hero-tagline {
     font-size: 1.5rem;
     font-weight: bold;
     color: #ffcc00;
     white-space: pre;
 }
+
 
 /* ========================= */
 /* Section Headings */
@@ -123,6 +136,7 @@ html, body {
     font-family: 'Georgia', serif;
 }
 
+
 /* ========================= */
 /* OLD TikTok grid (legacy) */
 /* ========================= */
@@ -133,6 +147,7 @@ html, body {
     gap: 20px;
 }
 
+
 .video-card {
     background-color: #1a1a1a;
     padding: 10px;
@@ -142,11 +157,13 @@ html, body {
     text-align: center;
 }
 
+
 .video-card iframe {
     width: 100%;
     height: 400px;
     border-radius: 8px;
 }
+
 
 /* ========================= */
 /* Typewriter Cursor Animation */
@@ -156,11 +173,13 @@ html, body {
     50% { border-right-color: #ffcc00; }
 }
 
+
 #typed-tagline {
     border-right: 2px solid #ffcc00;
     padding-right: 5px;
     animation: blinkCursor 0.7s step-end infinite;
 }
+
 
 /* ========================================================= */
 /* PODCAST FULL-WIDTH WRAPPER (NOTICEABLE GREY + DECOR BG) */
@@ -174,6 +193,7 @@ html, body {
     background: #2f2f2f;
 }
 
+
 /* blurred background image layer */
 .podcast-block::before{
     content:"";
@@ -185,6 +205,7 @@ html, body {
     transform: scale(1.05);
 }
 
+
 /* dark overlay */
 .podcast-block::after{
     content:"";
@@ -193,6 +214,7 @@ html, body {
     background: rgba(25,25,25,0.55);
 }
 
+
 .podcast-block > *{
     position: relative;
     z-index: 1;
@@ -200,6 +222,7 @@ html, body {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 /* ========================================================= */
 /* Banner: SMALL + NO CROPPING */
@@ -210,6 +233,7 @@ html, body {
     margin: 0 auto 35px;
 }
 
+
 .podcast-banner img{
     width: 100%;
     height: auto;
@@ -219,6 +243,7 @@ html, body {
     border-radius: 16px;
     box-shadow: 0 18px 45px rgba(0,0,0,0.45);
 }
+
 
 /* ========================================================= */
 /* Banner CTA Overlay (TikTok + YouTube) */
@@ -233,6 +258,7 @@ html, body {
     pointer-events: none;
 }
 
+
 .banner-cta__card{
     pointer-events: auto;
     max-width: 360px;
@@ -245,8 +271,10 @@ html, body {
     box-shadow: 0 18px 50px rgba(0,0,0,0.35);
 }
 
+
 .banner-cta__card--left{ justify-self: start; }
 .banner-cta__card--right{ justify-self: end; text-align: right; }
+
 
 .banner-cta__title{
     margin: 0 0 6px;
@@ -255,12 +283,14 @@ html, body {
     color: #fff;
 }
 
+
 .banner-cta__sub{
     margin: 0 0 12px;
     font-size: 13px;
     color: rgba(255,255,255,0.85);
     line-height: 1.35;
 }
+
 
 .cta-btn{
     display: inline-flex;
@@ -275,11 +305,13 @@ html, body {
     transition: transform .18s ease, filter .18s ease, background .18s ease;
 }
 
+
 /* ensure icons inside buttons scale nicely */
 .cta-btn i {
     font-size: 18px;
     line-height: 1;
 }
+
 
 .cta-btn svg{
     width: 18px;
@@ -287,14 +319,17 @@ html, body {
     stroke-width: 2.2;
 }
 
+
 .cta-btn:hover{
     transform: translateY(-2px);
     filter: brightness(1.05);
 }
 
+
 .cta-btn--tiktok{
     background: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(30,30,30,0.8));
 }
+
 
 .cta-btn--youtube{
     background: rgba(255,0,0,0.92);
@@ -306,6 +341,7 @@ html, body {
     padding-inline: 18px; /* adapts to icon+text width */
 }
 
+
 /* MOBILE CIRCLE ICONS OVER BANNER */
 .banner-cta__circles{
     position:absolute;
@@ -316,6 +352,7 @@ html, body {
     padding:0 18px 18px;       /* bottom third */
     pointer-events:none;
 }
+
 
 .banner-cta__circles .circle-btn{
     pointer-events:auto;
@@ -330,6 +367,7 @@ html, body {
     box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
 
+
 /* use Bootstrap Icons inside circles */
 .banner-cta__circles .circle-btn i {
     font-size: 26px;
@@ -337,8 +375,10 @@ html, body {
     color:#fff;
 }
 
+
 .circle-btn--tiktok{ background:#000; }
 .circle-btn--youtube{ background:#ff0000; }
+
 
 @media (max-width: 900px){
     .banner-cta{
@@ -355,29 +395,36 @@ html, body {
     }
 }
 
+
 /* Mobile layout: hide cards, show only circles */
 @media (max-width: 700px) {
+
 
   .podcast-banner {
     padding: 0 10px;
   }
 
+
   .podcast-banner img {
     max-height: 220px;
   }
+
 
   .banner-cta__card {
     display:none;
   }
 
+
   .banner-cta {
     padding:0;
   }
+
 
   .banner-cta__circles{
     display:flex;
   }
 }
+
 
 /* ========================================================= */
 /* Podcast section container */
@@ -388,13 +435,16 @@ html, body {
     gap: 40px;
     align-items: start;
 
+
     padding: 40px 30px;
     border-radius: 22px;
     overflow: hidden;
     position: relative;
 
+
     background: url("../assets/images/CLP9.jpeg") center/cover no-repeat;
 }
+
 
 #podcasts.podcast-page::before{
     content: "";
@@ -405,10 +455,12 @@ html, body {
     z-index: 0;
 }
 
+
 #podcasts.podcast-page > *{
     position: relative;
     z-index: 1;
 }
+
 
 /* LEFT CARD */
 #podcasts .podcast-card{
@@ -417,6 +469,7 @@ html, body {
     padding: 18px 18px 22px;
     color: #fff;
 }
+
 
 #podcasts .podcast-card .cover-img{
     width: 100%;
@@ -427,6 +480,7 @@ html, body {
     margin-bottom: 16px;
 }
 
+
 #podcasts .podcast-card h1{
     font-size: 38px;
     line-height: 1.1;
@@ -434,11 +488,13 @@ html, body {
     font-weight: 800;
 }
 
+
 #podcasts .podcast-card p{
     margin: 8px 0;
     font-size: 13px;
     opacity: 0.92;
 }
+
 
 #podcasts .play-latest{
     margin-top: 16px;
@@ -452,12 +508,14 @@ html, body {
     cursor: pointer;
 }
 
+
 #podcasts .quick-actions{
     margin-top: 16px;
     display: flex;
     gap: 12px;
     align-items: center;
 }
+
 
 #podcasts .quick-actions button{
     width: 44px;
@@ -469,6 +527,7 @@ html, body {
     cursor: pointer;
 }
 
+
 /* RIGHT SIDE */
 #podcasts .episode-list{
     display: flex;
@@ -478,6 +537,7 @@ html, body {
     position: relative;
 }
 
+
 /* Filter pills */
 #podcasts .episode-filters{
     display: flex;
@@ -485,6 +545,7 @@ html, body {
     align-items: center;
     margin-bottom: 18px;
 }
+
 
 #podcasts .episode-filters button{
     border: none;
@@ -496,6 +557,7 @@ html, body {
     color: #111;
 }
 
+
 /* Episodes list rows */
 #podcasts .episodes{
     display: flex;
@@ -503,6 +565,7 @@ html, body {
     gap: 18px;
     flex: 0 0 auto;
 }
+
 
 #podcasts .episode{
     background: transparent;
@@ -512,22 +575,26 @@ html, body {
     text-align: left;
     cursor: pointer;
 
+
     display: grid;
     grid-template-columns: 28px 190px 1fr 40px;
     gap: 14px;
     align-items: center;
 }
 
+
 #podcasts .episode:hover{
     background: rgba(0,0,0,0.03);
     border-radius: 10px;
 }
+
 
 #podcasts .episode-num{
     color: #666;
     font-weight: 600;
     text-align: right;
 }
+
 
 #podcasts .episode img{
     width: 190px;
@@ -537,6 +604,7 @@ html, body {
     display: block;
 }
 
+
 #podcasts .episode-info h2{
     font-size: 18px;
     margin: 0 0 8px;
@@ -544,11 +612,13 @@ html, body {
     color: #111;
 }
 
+
 #podcasts .episode-info p{
     margin: 0;
     color: #666;
     font-size: 13px;
 }
+
 
 #podcasts .episode-options{
     justify-self: end;
@@ -562,15 +632,18 @@ html, body {
     color: #111;
 }
 
+
 /* Subscribe box: lower-right */
 #podcasts .subscribe-box{
     margin-top: auto;
     align-self: flex-end;
     width: 340px;
 
+
     padding: 26px;
     border-radius: 18px;
     text-align: center;
+
 
     background: rgba(0,0,0,0.70);
     backdrop-filter: blur(6px);
@@ -578,11 +651,13 @@ html, body {
     box-shadow: 0 14px 40px rgba(0,0,0,0.35);
 }
 
+
 #podcasts .subscribe-box h3{
     margin: 0 0 10px;
     font-size: 20px;
     color: #fff;
 }
+
 
 #podcasts .subscribe-box p{
     margin: 0 0 18px;
@@ -590,6 +665,7 @@ html, body {
     color: rgba(255,255,255,0.85);
     line-height: 1.4;
 }
+
 
 #podcasts .subscribe-btn{
     display: inline-block;
@@ -603,15 +679,18 @@ html, body {
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
+
 #podcasts .subscribe-btn:hover{
     background: #cc0000;
     transform: scale(1.05);
 }
 
+
 /* Responsive */
 @media (max-width: 900px){
     .podcast-banner{ padding: 0 16px; }
     .podcast-banner img{ max-height: 200px; }
+
 
     #podcasts.podcast-page{
         grid-template-columns: 1fr;
@@ -619,18 +698,23 @@ html, body {
         padding: 24px 16px;
     }
 
+
     #podcasts .play-latest{ width: 100%; }
+
 
     #podcasts .episode{
         grid-template-columns: 24px 150px 1fr 36px;
     }
+
 
     #podcasts .episode img{
         width: 150px;
         height: 90px;
     }
 
+
     #podcasts .episode-list{ min-height: auto; }
+
 
     #podcasts .subscribe-box{
         margin-top: 22px;
@@ -638,6 +722,7 @@ html, body {
         width: auto;
     }
 }
+
 
 /* ========================= */
 /* RIGHT SLIDING YT CAROUSEL */
@@ -647,6 +732,7 @@ html, body {
     display: flex;
     justify-content: flex-end;
 }
+
 
 .yt-carousel-btn{
     border: none;
@@ -658,9 +744,11 @@ html, body {
     font-weight: 700;
 }
 
+
 .yt-carousel-btn:hover{
     background: rgba(0,0,0,0.85);
 }
+
 
 .yt-carousel{
     position: absolute;
@@ -675,12 +763,15 @@ html, body {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 
+
     transform: translateX(110%);
     transition: transform 0.35s ease;
     z-index: 10;
 }
 
+
 .yt-carousel.is-open{ transform: translateX(0); }
+
 
 .yt-carousel__header{
     display: flex;
@@ -690,12 +781,14 @@ html, body {
     padding: 6px 6px 12px;
 }
 
+
 .yt-carousel__header h3{
     margin: 0;
     color: #fff;
     font-size: 16px;
     font-weight: 800;
 }
+
 
 .yt-carousel__close{
     width: 36px;
@@ -707,7 +800,9 @@ html, body {
     cursor: pointer;
 }
 
+
 .yt-carousel__close:hover{ background: rgba(255,255,255,0.22); }
+
 
 .yt-carousel__track{
     display: flex;
@@ -718,7 +813,9 @@ html, body {
     scrollbar-width: none;
 }
 
+
 .yt-carousel__track::-webkit-scrollbar{ display: none; }
+
 
 .yt-slide{
     min-width: 460px;
@@ -733,13 +830,16 @@ html, body {
     scroll-snap-align: start;
 }
 
+
 .yt-slide:hover{ background: rgba(255,255,255,0.12); }
+
 
 .yt-num{
     color: rgba(255,255,255,0.75);
     font-weight: 700;
     text-align: right;
 }
+
 
 .yt-slide img{
     width: 170px;
@@ -749,6 +849,7 @@ html, body {
     display: block;
 }
 
+
 .yt-info h4{
     margin: 0 0 8px;
     color: #fff;
@@ -757,11 +858,13 @@ html, body {
     line-height: 1.25;
 }
 
+
 .yt-info p{
     margin: 0;
     color: rgba(255,255,255,0.75);
     font-size: 12px;
 }
+
 
 .yt-more{
     justify-self: end;
@@ -769,12 +872,14 @@ html, body {
     font-size: 18px;
 }
 
+
 .yt-carousel__nav{
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     padding: 0 6px 6px;
 }
+
 
 .yt-nav{
     width: 42px;
@@ -787,7 +892,9 @@ html, body {
     font-weight: 900;
 }
 
+
 .yt-nav:hover{ background: rgba(255,255,255,0.20); }
+
 
 @media (max-width: 900px){
     .yt-carousel{
@@ -798,16 +905,19 @@ html, body {
         border-radius: 0;
     }
 
+
     .yt-slide{
         min-width: 92vw;
         grid-template-columns: 26px 150px 1fr 30px;
     }
+
 
     .yt-slide img{
         width: 150px;
         height: 90px;
     }
 }
+
 
 /* ========================= */
 /* VIDEO MODAL PLAYER */
@@ -819,13 +929,16 @@ html, body {
     z-index: 2000;
 }
 
+
 .video-modal.is-open { display: block; }
+
 
 .video-modal__backdrop {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.75);
 }
+
 
 .video-modal__dialog {
     position: relative;
@@ -836,6 +949,7 @@ html, body {
     padding: 16px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
+
 
 .video-modal__close {
     position: absolute;
@@ -852,18 +966,22 @@ html, body {
     transition: background 0.2s ease;
 }
 
+
 .video-modal__close:hover { background: rgba(255, 255, 255, 0.3); }
+
 
 .video-modal__frame {
     border-radius: 14px;
     overflow: hidden;
 }
 
+
 .video-modal__frame iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
     display: block;
 }
+
 
 /* ========================= */
 /* Sports Section */
@@ -873,6 +991,7 @@ html, body {
     padding: 50px 20px;
     color: #fff;
 }
+
 
 /* ========================= */
 /* SIDE DECORATIVE IMAGES */
@@ -886,6 +1005,7 @@ html, body {
     overflow: hidden;
 }
 
+
 .side-image img{
     width: 100%;
     height: 100%;
@@ -893,8 +1013,10 @@ html, body {
     opacity: 0.9;
 }
 
+
 .side-left{ left: 0; }
 .side-right{ right: 0; }
+
 
 .hero,
 .podcast-block,
@@ -904,9 +1026,11 @@ html, body {
     z-index: 1 ;
 }
 
+
 @media (max-width: 1200px){
     .side-image{ display: none; }
 }
+
 
 /* ========================= */
 /* ICON BUTTONS */
@@ -925,24 +1049,29 @@ html, body {
     transition: all 0.25s ease;
 }
 
+
 .icon-btn svg{
     width: 20px;
     height: 20px;
     stroke-width: 2;
 }
 
+
 .icon-btn:hover{
     background: rgba(255,255,255,0.25);
     transform: translateY(-2px);
 }
 
+
 .icon-btn-dark{ background: rgba(0,0,0,0.75); }
 .icon-btn-dark:hover{ background: rgba(0,0,0,0.9); }
+
 
 .more-wrap{
     position: relative;
     display: inline-flex;
 }
+
 
 .more-menu{
     position: absolute;
@@ -960,7 +1089,9 @@ html, body {
     z-index: 9999;
 }
 
+
 .more-menu.is-open{ display: block; }
+
 
 .more-menu button{
     width: 100%;
@@ -974,9 +1105,11 @@ html, body {
     font-size: 14px;
 }
 
+
 .more-menu button:hover{
     background: rgba(255,255,255,0.10);
 }
+
 
 .toast{
     position: fixed;
@@ -996,10 +1129,12 @@ html, body {
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+
 .toast.show{
     opacity: 1;
     transform: translateX(-50%) translateY(-4px);
 }
+
 
 /* ========================= */
 /* TikTok Card Carousel      */
@@ -1011,17 +1146,20 @@ html, body {
   z-index:2;
 }
 
+
 .tiktok-carousel{
   max-width: 520px;
   margin: 0 auto;
   text-align: center;
 }
 
+
 .tiktok-carousel__subtitle{
   margin: 8px 0 28px;
   font-size: 0.95rem;
   color: #ccc;
 }
+
 
 .tiktok-carousel__viewport{
   position: relative;
@@ -1032,11 +1170,13 @@ html, body {
   overflow: visible;
 }
 
+
 .tiktok-carousel__track{
   position: relative;
   width: 100%;
   height: 100%;
 }
+
 
 /* Card base */
 .tiktok-card{
@@ -1053,7 +1193,10 @@ html, body {
   will-change: transform, opacity;
 }
 
+
+/* TikTok frame + overlay */
 .tiktok-card__frame{
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 18px;
@@ -1068,11 +1211,21 @@ html, body {
   border:0;
 }
 
+/* Transparent overlay that blocks touch/click to iframe */
+.tiktok-card__overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: transparent;
+  /* no pointer-events:none here so it actually intercepts touches */
+}
+
 .tiktok-card__caption{
   margin-top: 10px;
   font-size: 0.95rem;
   color:#eee;
 }
+
 
 /* Active / side cards */
 .tiktok-card.is-active{
@@ -1082,17 +1235,20 @@ html, body {
   z-index: 3;
 }
 
+
 .tiktok-card.is-prev{
   transform: translate(calc(-50% - 180px), -50%) scale(0.75);
   opacity: 0.5;
   z-index: 2;
 }
 
+
 .tiktok-card.is-next{
   transform: translate(calc(-50% + 180px), -50%) scale(0.75);
   opacity: 0.5;
   z-index: 2;
 }
+
 
 /* Nav arrows */
 .tiktok-carousel__nav{
@@ -1113,13 +1269,16 @@ html, body {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
+
 .tiktok-carousel__nav--prev{ left: -10px; }
 .tiktok-carousel__nav--next{ right: -10px; }
+
 
 .tiktok-carousel__nav:hover{
   background: rgba(0,0,0,0.95);
   transform: translateY(-50%) scale(1.05);
 }
+
 
 /* Dots */
 .tiktok-carousel__dots{
@@ -1128,6 +1287,7 @@ html, body {
   justify-content:center;
   gap:8px;
 }
+
 
 .tiktok-carousel__dots button{
   width:8px;
@@ -1139,16 +1299,19 @@ html, body {
   transition:background 0.2s ease, transform 0.2s ease, width 0.2s ease;
 }
 
+
 .tiktok-carousel__dots button.is-active{
   width:18px;
   background:#fff;
   transform:scale(1.05);
 }
 
+
 /* CTA */
 .tiktok-carousel__cta{
   margin-top:24px;
 }
+
 
 /* Mobile tweaks */
 @media (max-width:600px) {
@@ -1169,12 +1332,14 @@ html, body {
   .tiktok-carousel__nav--next{ right: 4px; }
 }
 
+
 .tiktok-section{
   padding: 80px 20px 120px;
   background: transparent;      /* was #000 */
   position: relative;
   z-index: 2;
 }
+
 
 .tiktok-carousel{
   max-width: 520px;
@@ -1186,6 +1351,7 @@ html, body {
   box-shadow: 0 22px 60px rgba(0,0,0,0.7);
 }
 
+
 .section-nav{
   position: fixed;
   top: 0;
@@ -1194,14 +1360,17 @@ html, body {
   z-index: 1500;        /* higher than TikTok content */
 }
 
+
 .tiktok-section{
   position: relative;
   z-index: 2;           /* lower than nav */
 }
 
+
 /* ========================= */
 /* SIMPLE ABOUT + TEAM       */
 /* ========================= */
+
 
 .about,
 .about-team {
@@ -1209,13 +1378,16 @@ html, body {
   color: #fff;
 }
 
+
 .about {
   padding: 60px 20px 30px;
 }
 
+
 .about-team {
   padding: 40px 20px 80px;
 }
+
 
 .about-inner {
   max-width: 1100px;
@@ -1223,16 +1395,19 @@ html, body {
   padding: 0 32px;
 }
 
+
 .about h2 {
   font-size: 2.4rem;      /* bigger main heading */
   margin-bottom: 1.4rem;
 }
+
 
 .about h2,
 .about-team h2,
 .about-team-header h3 {
   text-align: center;
 }
+
 
 .about h2,
 .about-team h2 {
@@ -1241,10 +1416,12 @@ html, body {
   font-weight: 800;
 }
 
+
 .about p {
   font-size: 1.5rem;
   line-height: 1.8
 }
+
 
 .about h3 {
   font-size: 1.5rem;
@@ -1252,11 +1429,13 @@ html, body {
   margin-top: 2rem;
 }
 
+
 .about-list {
   list-style: disc;
   padding-left: 1.5rem;
   margin: 0;
 }
+
 
 .about-list li {
   margin-bottom: 0.6rem;
@@ -1264,15 +1443,18 @@ html, body {
   line-height: 1.6;
 }
 
+
 /* Center the Meet the team heading */
 .about-team-header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
+
 .about-team-header h3 {
   font-size: 2rem;
 }
+
 
 .about-team-header p {
   font-size: 1.5rem;
@@ -1280,12 +1462,14 @@ html, body {
   margin-top: 0.6rem;
 }
 
+
 /* Team */
 .about-team-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
+
 
 .team-card {
   background: #0b0b0b;
@@ -1297,6 +1481,7 @@ html, body {
   flex-direction: column;
 }
 
+
 .team-img {
   width: 100%;
   height: 230px ;
@@ -1306,18 +1491,22 @@ html, body {
   margin-bottom: 12px;
 }
 
+
 .team-card h3 {
   font-size: 1.2rem;
 }
+
 
 .team-role {
   font-size: 0.8rem ;
 }
 
+
 .team-bio {
   font-size: 0.98rem;
   line-height: 1.7;
 }
+
 
 /* Stack on mobile */
 @media (max-width: 900px) {
@@ -1326,18 +1515,22 @@ html, body {
   }
 }
 
+
 /* Small spacing polish for About + Team */
 .about {
   padding-top: 40px;      /* was 60–80, reduce if you want it closer to TikTok */
 }
 
+
 .about-team {
   margin-top: 10px;       /* slight gap from About */
 }
 
+
 .about-team-grid {
   align-items: stretch;   /* cards same height visually */
 }
+
 
 /* Full-width black band for About + Team */
 .about-band {
@@ -1346,6 +1539,7 @@ html, body {
   background: #000;
 }
 
+
 /* Mobile tweaks so text doesn't feel cramped */
 @media (max-width: 900px) {
   .about-inner {
@@ -1353,19 +1547,23 @@ html, body {
     padding: 0 16px;
   }
 
+
   .about-team-grid {
     grid-template-columns: 1fr;
   }
 
+
   .about h2 {
     font-size: 2rem;
   }
+
 
   .about p,
   .team-bio {
     font-size: 0.95rem;
   }
 }
+
 
 /* Meet the team hover effect */
 .team-card {
@@ -1379,15 +1577,18 @@ html, body {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+
 .team-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 28px 70px rgba(0,0,0,0.85);
   border-color: rgba(255, 204, 0, 0.7); /* subtle gold outline */
 }
 
+
 .team-card:hover .team-img {
   filter: brightness(1.05);
 }
+
 
 .team-card:hover h3 {
   color: #ffcc00;
@@ -1397,14 +1598,17 @@ html, body {
     height: 80vh; /* a bit shorter on phones */
   }
 
+
   .hero-logo {
     max-width: 140px;       /* was 200px */
     margin-bottom: 10px;
   }
 
+
   .hero-overlay {
     padding: 14px 18px;
   }
+
 
   .hero-tagline {
     font-size: 1.1rem;
@@ -1414,33 +1618,40 @@ html, body {
 /* Smaller Chill Lounge card on mobile */
 @media (max-width: 600px) {
 
+
   #podcasts .podcast-card {
     max-width: 100%;
     padding: 14px 14px 18px;
     border-radius: 20px;
   }
 
+
   #podcasts .podcast-card .cover-img {
     height: 220px;
   }
+
 
   #podcasts .podcast-card h1 {
     font-size: 28px;
     margin: 8px 0 6px;
   }
 
+
   #podcasts .podcast-card p {
     font-size: 12px;
   }
+
 
   #podcasts .play-latest {
     padding: 10px 14px;
     font-size: 14px;
   }
 
+
   #podcasts .quick-actions {
     gap: 10px;
   }
+
 
   #podcasts .quick-actions button {
     width: 40px;
@@ -1450,26 +1661,32 @@ html, body {
 /* Smaller TikTok section + cards on mobile */
 @media (max-width: 600px) {
 
+
   .tiktok-section {
     padding: 50px 12px 70px;       /* less top/bottom space */
   }
+
 
   .tiktok-carousel {
     padding: 28px 16px 24px;       /* thinner black panel */
   }
 
+
   .tiktok-carousel__viewport {
     height: 420px;                 /* was 520px */
   }
+
 
   .tiktok-card {
     width: 90vw;
     height: 360px;                 /* was 440–480px */
   }
 
+
   .tiktok-card__frame {
     border-radius: 16px;
   }
+
 
   .tiktok-card__caption {
     font-size: 0.85rem;
@@ -1478,10 +1695,12 @@ html, body {
 /* tighten gap between Subscribe box and TikTok Clips */
 @media (max-width: 900px) {
 
+
   /* pull TikTok section up */
   .tiktok-section {
     padding-top: 40px;        /* was 80px */
   }
+
 
   /* reduce bottom space under podcasts wrapper */
   .podcast-block {
@@ -1491,35 +1710,43 @@ html, body {
 /* Smaller Meet the team cards on mobile */
 @media (max-width: 600px) {
 
+
   .about-team {
     padding: 30px 16px 50px;      /* less vertical space */
   }
+
 
   .about-team-header {
     margin-bottom: 1.2rem;
   }
 
+
   .about-team-grid {
     gap: 1.4rem;
   }
+
 
   .team-card {
     padding: 14px 14px 18px;
     border-radius: 18px;
   }
 
+
   .team-img {
     height: 200px;               /* was 230px */
     margin-bottom: 10px;
   }
 
+
   .team-card h3 {
     font-size: 1.05rem;
   }
 
+
   .team-role {
     font-size: 0.75rem;
   }
+
 
   .team-bio {
     font-size: 0.9rem;
@@ -1527,14 +1754,10 @@ html, body {
   }
 }
 
+
 /* Full-width grey band between hero and TikTok/podcast */
 .hero-spacer{
   width: 100%;
   height: 60px;                 /* adjust to taste: 40–80px */
   background: #1e1e1e;          /* medium‑dark grey */
 }
-/* Prevent horizontal page scroll so swipe feels anchored */
-html, body {
-  overflow-x: hidden;
-}
-
